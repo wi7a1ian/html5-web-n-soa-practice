@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    //Store 2 cookies with a username of John Doe and an email of john@doe.com
+    //Print out all of the cookies
+    //Pretty-print the cookies so that they are more readable (hint: use split and for)
+
+    document.cookie = "username=John Doe; expires=Thu, 18 Dec 2018 12:00:00 UTC; path=/";
+    document.cookie = "username2=Tomsz Lis; expires=Thu, 18 Dec 2018 12:00:00 UTC; path=/";
+    console.log(document.cookie);
+
+    var usernames = document.cookie.split(";");
+    for( var i in usernames ){
+      var keyvalpair = usernames[i].split("=");
+      console.log("Name: "+keyvalpair[0].trim()+", Value: "+keyvalpair[1].trim());
+    }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    // Case 6 - no overloading
+    function log(message){
+        console.log(message);
+    }
+
+    function log(message1, message2){
+        console.log(message1 + " " + message2);
+    }
+
+    log("No overloading");
+    log("Just", "overwriting");
+
+    // Case 7 - accept only functions as params
+    function executeFunction(runThis){
+        if(runThis !== undefined && typeof(runThis) === 'function'){
+            runThis();
+        } else {
+            console.log("no function passed");
+        }
+    }
+
+    executeFunction();
+    executeFunction(function(){console.log("big beer")});
+    executeFunction("function");
+    executeFunction(12345);
+
+    </script>
+  </body>
+</html>

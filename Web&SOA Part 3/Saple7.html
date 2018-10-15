@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="JS&JQuery">
+    <meta name="keywords" content="JS&JQuery">
+    <meta name="author" content="John Doe">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    // Case 11
+    var metas = document.getElementsByTagName('meta');
+    for(var i in metas){
+      console.log(metas[i]);
+      var name = metas[i].getAttribute("name");
+      if(name !== null){
+        var content = metas[i].getAttribute("content");
+        console.log(name, content);
+      }
+    }
+
+    </script>
+  </body>
+</html>

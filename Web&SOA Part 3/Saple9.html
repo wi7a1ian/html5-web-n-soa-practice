@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    // Case 12
+    var Employee = function(name, age){
+      // Public
+      this.Name = name;
+      this.Age = age;
+      
+      // Private
+      var SkinColor = "white";
+
+      this.ShowDetails = function(){
+        return "Employee "+this.Name+", Age: "+this.Age;
+      }
+    }
+
+    var Driver = function(){
+      this.Drive = function(){
+        return this.Name + " is now driving";
+      }
+    }
+    Driver.prototype = new Employee("Tomek", 16); // kinky "inheritance"
+
+    var driver = new Driver();
+    console.log(driver.ShowDetails());
+    console.log(driver.Drive());
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    //Get the items from localStorage and sessionStorage
+    var sessionResult = sessionStorage.getItem("usernameSession");
+    var localResult = localStorage.getItem("usernameLocal");
+
+    //display the items
+    alert(sessionResult);
+    alert(localResult);
+
+    //Set the items
+    sessionStorage.setItem("usernameSession", "John Doe");
+    localStorage.setItem("usernameLocal", "John Doe");
+
+    //Experiment with opening this in a new tab maybe clear the cache - what do you see?
+    </script>
+  </body>
+</html>

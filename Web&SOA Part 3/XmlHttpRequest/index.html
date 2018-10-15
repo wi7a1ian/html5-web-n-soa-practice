@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Web&SOA</title>
+</head>
+
+<body>
+	<span>
+		The content of SomeText.txt is:
+	</span>
+	<span id="theContent"></span>
+
+	<script type="text/javascript">
+		// Perform a GET XMLHttpRequest on SomeText.txt
+		// Once complete, set the innerHtml of the "theContent" element to the response text
+		// You can set the text by using: document.getElementById("theContent").innerHTML
+
+		var req = new XMLHttpRequest();
+		req.onreadystatechange = function() {
+				if (req.readyState == 4) {
+					if (req.status == 200 || window.location.href.indexOf("http") == -1) {
+						document.getElementById("theContent").innerHTML = req.responseText;
+					} else {
+						alert("An error has occured making the request");
+					}
+				}
+			}
+			//var namevalue=encodeURIComponent(document.getElementById("name").value)
+			//var agevalue=encodeURIComponent(document.getElementById("age").value)
+		req.open("GET", "SomeText.txt", true); //"basicform.php?name="+namevalue+"&age="+agevalue, true)
+		req.send(null);
+	</script>
+</body>
+
+</html>

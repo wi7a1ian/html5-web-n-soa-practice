@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" media="screen" title="no title" charset="utf-8">
+  </head>
+
+  <body>
+    <div id="content">
+
+  	<h2>Creating a School Timetable</h2>
+  	<div class="demo-info" style="margin-bottom:10px">
+  		<div class="demo-tip icon-tip">&nbsp;</div>
+  		<div>Click and drag a class to timetable.</div>
+  	</div>
+
+  	<div id="dragarea" style="width:700px;">
+  		<div class="left droppable">
+  			<table>
+  				<tbody><tr>
+  					<td><div class="item">English</div></td>
+  				</tr>
+  				<tr>
+  					<td><div class="item" class="">Science</div></td>
+  				</tr>
+  				<tr>
+  					<td><div class="item" style="">Music</div></td>
+  				</tr>
+  				<tr>
+  					<td><div class="item" >History</div></td>
+  				</tr>
+  				<tr>
+  					<td><div class="item" >Computer</div></td>
+  				</tr>
+  				<tr>
+  					<td><div class="item" style="">Mathematics</div></td>
+  				</tr>
+  				<tr>
+  					<td><div class="item" style="">Arts</div></td>
+  				</tr>
+  				<tr>
+  					<td><div class="item" style="">Ethics</div></td>
+  				</tr>
+  			</tbody></table>
+  		</div>
+  		<div class="right">
+  			<table>
+  				<tbody><tr>
+  					<td class="blank"></td>
+  					<td class="title">Monday</td>
+  					<td class="title">Tuesday</td>
+  					<td class="title">Wednesday</td>
+  					<td class="title">Thursday</td>
+  					<td class="title">Friday</td>
+  				</tr>
+  				<tr>
+  					<td class="time">08:00</td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  				</tr>
+  				<tr>
+  					<td class="time">09:00</td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  				</tr>
+  				<tr>
+  					<td class="time">10:00</td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  				</tr>
+  				<tr>
+  					<td class="time">11:00</td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  				</tr>
+  				<tr>
+  					<td class="time">12:00</td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  				</tr>
+  				<tr>
+  					<td class="time">13:00</td>
+  					<td class="lunch" colspan="5">Lunch</td>
+  				</tr>
+  				<tr>
+  					<td class="time">14:00</td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  				</tr>
+  				<tr>
+  					<td class="time">15:00</td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  				</tr>
+  				<tr>
+  					<td class="time">16:00</td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  					<td class="drop droppable"></td>
+  				</tr>
+  			</tbody></table>
+  		</div>
+  	</div>
+  	<style type="text/css">
+  		.left{
+  			width:120px;
+  			float:left;
+  		}
+  		.left table{
+  			background:#E0ECFF;
+  		}
+  		.left td{
+  			background:#eee;
+  		}
+  		.right{
+  			float:right;
+  			width:570px;
+  		}
+  		.right table{
+  			background:#E0ECFF;
+  			width:100%;
+  		}
+  		.right td{
+  			background:#fafafa;
+  			color:#444;
+  			text-align:center;
+  			padding:2px;
+  		}
+  		.right td{
+  			background:#E0ECFF;
+  		}
+  		.right td.drop{
+  			background:#fafafa;
+  			width:100px;
+  		}
+  		.right td.over{
+  			background:#FBEC88;
+  		}
+  		.item{
+  			text-align:center;
+  			border:1px solid #499B33;
+  			background:#fafafa;
+  			color:#444;
+  			width:100px;
+  		}
+      .item.ui-draggable-dragging {
+        background: green;
+        color: #ffffff;
+      }
+      .item.ui-draggable-dropped {
+        background: #aaaaff;
+      }
+
+  		.assigned{
+  			border:1px solid #BC2A4D;
+  		}
+  		.trash{
+  			background-color:red;
+  		}
+
+      .droppable.hovered{
+        background-color: blue;
+      }
+  	</style>
+  	<script>
+
+    $(function() {
+      $('.left div.item').draggable({
+        containment: 'document',
+        cursor: 'move',
+        snap: '.droppable',
+        helper: 'clone',
+        revert: true,
+        //start: function(event, ui){ui.css("background", "#00aa00")},
+        //stop: function(event, ui){ui.css("background","#fafafa")},
+      });
+    });
+
+    $('.right td.drop').droppable( {
+      accept: '.item',
+      hoverClass: 'hovered',
+      drop: handleDropEvent,
+      //over:
+    } );
+
+    $('.left').droppable( {
+      accept: 'div.ui-draggable-dropped',
+      hoverClass: 'hovered',
+      drop: function(event, ui){ $(ui.helper).remove(); },
+    } );
+
+    function handleDropEvent(event, ui){
+      if(!$(this).data('occupied') === true){
+
+        $(ui.helper).clone()
+        .removeClass('ui-draggable ui-draggable-dragging').addClass('ui-draggable-dropped')
+        .appendTo($(this))
+        .draggable({
+          containment: 'document',
+          cursor: 'move',
+          revert: true,
+          //start: function(event, ui){ console.log($(ui)); $(ui).parent().data('occupied', false) }
+        });
+
+
+
+        $(this).data('occupied', true);
+      }
+    }
+
+  	</script>
+
+  </div>
+  </body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    // Case 3
+    function letsBegin() {
+      var kokojumbo1 = new Function("document.bgColor='black'");
+      var kokojumbo2 = function() {
+        document.bgColor = 'black';
+      };
+      console.log(kokojumbo1,kokojumbo2);
+
+      var kuku = new Object();
+      var koko = {};
+      console.log(kuku,koko);
+
+      var beee = new String("beee");
+      var muuu = "muuu";
+      console.log(beee,muuu);
+
+      var ihahaa = new Number(3);
+      var ihoiho = 3;
+      console.log(ihahaa,ihoiho);
+
+      var hauuuu = new Boolean(false);
+      var miauuu = false;
+      console.log(hauuuu,miauuu);
+
+      if(hauuuu){
+        console.log("WRONG");
+      }
+    }
+
+    // Case 4
+    function equality(){
+      if(1 == true)   { console.log("1"); }
+      if(1 == "1")    { console.log("2"); }
+      if(0 == "")     { console.log("3"); }
+
+      if(1 === true)  { console.log("4"); }
+      if(1 === "1")   { console.log("5"); }
+      if(0 === "")    { console.log("6"); }
+    }
+
+    // Case 5
+    function printMyName(myName){
+      console.log("My name is " + myName);
+    }
+    function printMyName2(myName){
+      if( typeof myName !== "string"){
+        throw "Wrong!";
+      }
+      console.log("My name is " + myName);
+    }
+
+    letsBegin();
+    equality();
+    printMyName(10);
+    try{
+      printMyName2(10);
+    }catch(e){
+      console.log(e);
+    }finally{
+      console.log("finally");
+    }
+
+
+    </script>
+  </body>
+</html>

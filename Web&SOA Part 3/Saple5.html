@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h4>Normal variable and function</h4>
+    <div>
+      <span>'Normal' variable value: </span>
+      <span id="normalVariable"></span>
+    </div>
+    <div>
+      <span>'Normal' function: </span>
+      <span id="normalFunction"></span>
+    </div>
+    <h4>Object variable and function</h4>
+    <div>
+      <span>object function: </span>
+      <span id="objectFunction"></span>
+    </div>
+    <div>
+      <span>object varible: </span>
+      <span id="objecetVariable"></span>
+    </div>
+    <h4>Click event handler</h4>
+    <button onclick="buttonClicked()">
+    Click Me
+    </button>
+    <div>
+      <span>Click handler: </span>
+      <span id="clickHandler"></span>
+    </div>
+
+    <h4>Click event on object</h4>
+    <button id="clickOnObjectButton">
+    Click Me
+    </button>
+    <div>
+      <span>Click handler: </span>
+      <span id="clickHandlerObject"></span>
+    </div>
+
+    <script>
+    // Case 9 - variable scope
+    //First, let's define a global variable
+    //Hint: it may help to see if you can access this variable by using
+    //'this'
+    globalVar = "global!";
+    var localVar = "local!";
+
+    //set the innerHTML of the 'normalVariable' span by experimenting with 'this'
+    document.getElementById("normalVariable").innerHTML = this.toString();
+
+    function normalFunction() {
+    	//set the innerHTML of the 'normalFunction' span by experimenting with 'this'
+    	document.getElementById("normalFunction").innerHTML = this.toString();
+    }
+    normalFunction();
+
+    //First we define an object and give it a variable and a function
+    var myObject = new Object();
+    myObject.myVar = "object variable value!"
+    myObject.myFunction = function() {
+    	document.getElementById("objectFunction").innerHTML = this.toString();
+    }
+
+    //calls the function on the object
+    myObject.myFunction();
+
+
+    function buttonClicked() {
+    	document.getElementById("clickHandler").innerHTML = this.toString();
+    }
+
+    var myObject = new Object();
+    myObject.myVar = "object variable value!"
+    myObject.clickHandler = function() {
+    	document.getElementById("clickHandlerObject").innerHTML = this.toString();
+    }
+
+    //calls the function on the object
+    var button = document.getElementById("clickOnObjectButton");
+    button.onclick = function() {myObject.clickHandler();};
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div>
+    <span>
+      Welcome back:
+    </span>
+    <span id="theUserName">
+    </span>
+    </div>
+    <input id="textBox" type="text" />
+    <button onclick="submitClicked()" >Submit</button>
+
+    <script>
+
+    document.cookie = "username=John Doe;"
+
+    function getCookie(cookieName) {
+      var cookieStr = document.cookie;
+      console.log(cookieStr);
+      var startIdx = cookieStr.search(cookieName)
+      if(startIdx > -1){
+        var endIdx = cookieStr.indexOf(";", startIdx)
+
+        if(endIdx > -1){
+          return cookieStr.substring(startIdx+cookieName.length+1, endIdx).trim();
+        }else{
+          return cookieStr.substring(startIdx+cookieName.length+1).trim();
+        }
+      }else{
+        return "";
+      }
+    }
+
+    function updateName() {
+    	document.getElementById('theUserName').innerHTML = getCookie("username");
+    }
+
+    updateName();
+
+    function submitClicked() {
+      document.cookie = "username="+document.getElementById('textBox').value;
+      updateName();
+    }
+
+    </script>
+  </body>
+</html>

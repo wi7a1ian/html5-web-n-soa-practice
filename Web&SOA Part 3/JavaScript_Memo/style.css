@@ -1,0 +1,45 @@
+﻿h1 {
+    font-size: 1.5em;
+    margin-left: 44px;
+}
+
+#board {
+    width: 800px;
+    margin: 0 auto;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li.tile-container {
+    padding: 0;
+    float: left;
+    margin: 10px;
+    list-style: none;
+    border: solid 1px black;
+    width: 150px;
+    height: 150px;
+}
+
+li div.tile {
+    width: 100%;
+    height: 100%;
+}
+
+#controls {
+    margin: 20px 0px 0px 0px;
+    width: 100%;
+    text-align: center;
+}
+
+#controls input[type=button] {
+    margin: 10px 0px;
+    padding: 5px;
+}
+
+#win-message {
+    padding: 10px 0px;
+    color: green;
+}

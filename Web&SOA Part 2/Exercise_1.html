@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Web&SOA Exercise</title>
+        <link rel="stylesheet" href="/css/exercise_1.css" media="screen" title="no title" charset="utf-8">
+
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="script/exercise_1.js"></script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Web&SOA Course</a>
+            </div>
+            <ul class="nav nav-pills">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Profile</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Messages
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Inbox</a></li>
+                  <li><a href="#">Drafts</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Sent Items</a></li>
+                </ul>
+              </li>
+                <li class="dropdown pull-right">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Logout</a></li>
+                  </ul>
+                </li>
+            </ul>
+          </div>
+        </nav>
+
+        <section class="container-fluid">
+            <div class="jumbotron text-center">
+                <h1>Web&SOA</h1>
+            </div>
+            <article>
+                <header>
+                    <h1>Examples</h1>
+                    <p>
+                        HTML, Bootstrap, basic CSS
+                    </p>
+                </header>
+                <p>
+                    Hello World!
+                </p>
+                <footer>
+                    <p>
+                        Powered by Kroll Ontrack
+                    </hp>
+                    <br />
+                    <p>
+                        Contact Information <a href="mailto:someone@example.com?subject=feedback">someone@example.com</a>
+                    </p>
+                </footer>
+            </article>
+        </section>
+
+        <section class="container-fluid bg-grey">
+            <div class="dropdown">
+              <a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown">Dropdown
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Dropdown header 1</li>
+                <li><a href="#">Action</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Dropdown header 2</li>
+                <li><a href="#">Another action</a></li>
+              </ul>
+            </div>
+        </section>
+
+        <section class="container-fluid">
+            <form class="well form-horizontal" role="form" action="#" method="GET">
+                <h1>
+                    Registration form:
+                </h1>
+                <br>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="name">Name:</label>
+                  <div class="col-sm-10">
+                      <input type="text" id="name" class="form-control" name="name" required placeholder="Type your name here">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="password">Password:</label>
+                  <div class="col-sm-10">
+                      <input id="password" class="form-control" type="password" name="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,}">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="department">Departament:</label>
+                  <div class="col-sm-10">
+                      <input id="department" class="form-control" list="departmentlist"><datalist  id="departmentlist" required><option value="Finance" /><option value="Human Resources" /></datalist>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="birthdate">Brith Date:</label>
+                  <div class="col-sm-10">
+                      <input id="birthdate" class="form-control" type="date" name="birthdate" required min="1980-01-01" max="2000-01-01">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="experienceyears">Experience (years): </label>
+                  <div class="col-sm-10">
+                      <input id="experienceyears" class="form-control" type="number" name="experienceyears" min="0" max="50" step="0.5">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="eyecolor">Eye color: </label>
+                  <div class="col-sm-10">
+                      <input id="eyecolor" class="form-control" type="color" name="eyecolor">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="email">Email: </label>
+                  <div class="col-sm-10">
+                      <input id="email" class="form-control" type="email" name="name">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="avatar">Avatar: </label>
+                  <div class="col-sm-10">
+                      <input id="avatar" class="form-control" type="file" name="avatar" style="display: inline-block">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="gender">Gender: </label>
+                  <div class="col-sm-10">
+                      <input type="radio" name="gender" value="male">Male
+                      <input type="radio" name="gender" value="female">Female
+                  </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="reset" class="btn btn-default-disabled" disabled>Reset</button>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="container-fluid">
+            <div class="well">
+                <button type="button" class="btn btn-default btn-xs btn-block">Small</button>
+                <button type="button" class="btn btn-default btn-xs btn-block">Small</button>
+                <button type="button" class="btn btn-default btn-xs btn-block">Small</button>
+                <button type="button" class="btn btn-default btn-xs btn-block">Small</button>
+            </div>
+            <br />
+            <br />
+            <div class="well">
+                <button type="button" class="btn btn-default">Default</button>
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-link">Link</button>
+            </div>
+        </section>
+
+        <section class="container-fluid">
+            <div class="panel panel-warning ">
+                <div class="panel-heading">
+                    Be careful!
+                </div>
+                <div class="panel-body">
+                  panel content panel content panel content panel content
+                  panel content panel content panel content panel content
+                  panel content panel content panel content panel content
+                  panel content panel content panel content panel content
+                  panel content panel content panel content panel content
+                  panel content panel content panel content panel content
+                  panel content panel content panel content panel content
+                  panel content panel content panel content panel content
+                  panel content panel content panel content panel content
+                </div>
+                <div class="panel-footer">... so now you know.</div>
+          </div>
+        </section>
+
+        <section class="container-fluid">
+            <div class="well">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="demo"></div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="demo"></div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="demo"></div>
+                  </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid">
+            <div class="well">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-3">
+                      <p class="demo">Box 1</p>
+                    </div>
+                    <div class="col-xs-4 col-sm-3">
+                      <p class="demo">Box 2</p>
+                    </div>
+                    <div class="col-xs-4 col-sm-3">
+                      <p class="demo">Box 3</p>
+                    </div>
+                    <div class="col-xs-4 col-sm-3">
+                      <p class="demo">Box 4</p>
+                    </div>
+                    <div class="col-xs-4 col-sm-3">
+                      <p class="demo">Box 5</p>
+                    </div>
+                    <div class="col-xs-4 col-sm-3">
+                      <p class="demo">Box 6</p>
+                    </div>
+                    <div class="col-xs-4 col-sm-3">
+                      <p class="demo">Box 7</p>
+                    </div>
+                    <div class="col-xs-4 col-sm-3">
+                      <p class="demo">Box 8</p>
+                    </div>
+                    <div class="col-xs-4 col-sm-3">
+                      <p class="demo">Box 9</p>
+                    </div>
+                  </div>
+            </div>
+        </section>
+
+        <section class="container-fluid">
+            <div class="well">
+
+                <div class="row">
+                    <div class="col-xs-4">
+                      <p class="demo tallHeight">Box 1</p>
+                    </div>
+                    <div class="col-xs-4">
+                      <p class="demo shortHeight">Box 2</p>
+                    </div>
+                    <div class="col-xs-4">
+                      <p class="demo shortHeight">Box 3</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-xs-4">
+                      <p class="demo shortHeight">Box 4</p>
+                    </div>
+                    <div class="col-xs-4">
+                      <p class="demo tallHeight">Box 5</p>
+                    </div>
+                    <div class="col-xs-4">
+                      <p class="demo shortHeight">Box 6</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-xs-4">
+                      <p class="demo shortHeight">Box 7</p>
+                    </div>
+                    <div class="col-xs-4">
+                      <p class="demo shortHeight">Box 8</p>
+                    </div>
+                    <div class="col-xs-4">
+                      <p class="demo tallHeight">Box 9</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container-fluid">
+            <div class="well">
+
+                <div class="row">
+                    <div class="col-xs-8 col-sm-6">
+                      <div class="demo tallHeight"></div>
+                    </div>
+                    <div class="col-xs-4 col-sm-6">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="demo shortHeight"></div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="demo shortHeight"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container-fluid">
+            <div class="well">
+
+                <button class="btn btn-primary" data-toggle="collapse" data-target="#demo">Open Exercise</button>
+                <div id="demo" class="collapse">
+
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Loren ipsum</a>
+                            </h4>
+                          </div>
+                          <div id="collapse1" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Nothing is here
+                            </div>
+                          </div>
+                        </div>
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Details</a>
+                            </h4>
+                          </div>
+                          <div id="collapse2" class="panel-collapse collapse in">
+                            <div class="panel-body">
+
+                                <ul class="nav nav-tabs">
+                                  <li class="active" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover"><a href="#collapse2">Text</a></li>
+                                  <li><a href="#collapse2" data-toggle="modal" data-target="#myModal">Button</a></li>
+                                </ul>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Modal -->
+                    <div id="myModal" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                          </div>
+                          <div class="modal-body">
+                            <p>Some text in the modal.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </body>
+</html>

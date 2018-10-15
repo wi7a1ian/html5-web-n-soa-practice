@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    // Query strings: http://localhost:8080/Saple16.html?asas=ww&asdsd=111
+
+    function getValueFromQueryString(varName) {
+      var searchStr = location.search;
+      var startIdx = searchStr.search(varName)
+      if(startIdx > -1){
+        var endIdx = searchStr.indexOf("&", startIdx)
+
+        if(endIdx > -1){
+          return searchStr.substring(startIdx+varName.length+1, endIdx);
+        }else{
+          return searchStr.substring(startIdx+varName.length+1).trim();
+        }
+      }else{
+        return "";
+      }
+    }
+
+    console.log(getValueFromQueryString("asas"));
+    console.log(getValueFromQueryString("asdsd"));
+    console.log(getValueFromQueryString("nima"));
+
+    </script>
+  </body>
+</html>

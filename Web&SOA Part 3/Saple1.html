@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    // Case 1
+      var searchString = "this will be our search string for searching things and more...";
+      var idx = 0;
+
+      while((idx = searchString.indexOf("e", idx+1)) > -1){
+        console.log(idx);
+      }
+
+      //var arr = searchString.match(/(\w+)/i);
+      var arr = searchString.split(" ");
+      for(var i=0; i < arr.length; ++i)
+      {
+        if(i%2){
+          console.log(arr[i]);
+        }
+      }
+
+      // Case 2
+      arr = ["A3","mondeo", 207, "passat", "megane"];
+      /*arr.forEach(function(entry){
+      for(var item in arr){
+        console.log(arr[item]);
+      }*/
+
+      for(var item in arr){
+        if(arr[item] == "passat")
+        {
+          arr[item] = "golf"
+        }
+      }
+
+      arr.splice(arr.indexOf("megane"))
+
+      arr.forEach(function(entry){
+        if(Number.isInteger(entry))
+        {
+          console.log(entry+" NUMBER")
+        }else {
+          console.log(entry)
+        }
+      })
+    </script>
+  </body>
+</html>

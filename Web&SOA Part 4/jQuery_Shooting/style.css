@@ -1,0 +1,79 @@
+﻿.container {
+    box-sizing: border-box;
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.wa {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 19px;
+}
+
+.wa-hover {
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+.black {
+    background-color: #2B2926;
+    border: 1px solid white;
+}
+
+.blue {
+    background-color: #00BCE2;
+}
+
+.red {
+    background-color: #EF3340;
+}
+
+.yellow {
+    background-color: #F9E526;
+}
+
+.ten-ring {
+    padding: 9.5px;
+}
+
+.x-ring {
+    padding: 0;
+}
+
+#scores {
+    margin: 20px 0px 0px 0px;
+    width: 100%;
+    text-align: center;
+}
+
+    #scores table {
+        width: 20%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    #scores table, #scores th, #scores td {
+        border: 1px solid black;
+    }
+
+    #scores input[type=button] {
+        margin: 10px 0px;
+        padding: 5px;
+    }
+
+#reload-message {
+    padding: 10px 0px;
+    color: red;
+}
+
+#win-message {
+    padding: 10px 0px;
+    color: green;
+}

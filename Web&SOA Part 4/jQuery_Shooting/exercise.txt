@@ -1,0 +1,40 @@
+﻿jQuery Events
+
+Exercise 1:
+Run the game when the Start button is clicked. Stop the game when the Stop button is clicked
+
+HINTS:	- Use the jQuery .click convenience method to define event handler for the stop-start element
+		- Based on isGameStopped variable, execute either startGame or stopGame function
+
+Exercise 2:
+Loose an arrow when the target is clicked
+
+HINTS:	- In the startGame function, use the jQuery .on to create click event handler for wa elements
+		- execute shoot function to handle the event
+
+Exercise 3:
+Clear the score when the Clear button is clicked
+
+HINTS:	- Use the jQuery .bind to create click event handler for reset-score element
+		- execute resetScore function to handle the event
+
+Exercise 4:
+Change mouse curson when mouse pointer hovers over the target
+
+HINTS:	- Use the jQuery .hover convenience method to define event handler for the container element
+		- when mouse pointer doesn't hover over the target, change css cursor to pointer
+		- when mouse pointer hovers over the target, change css cursor to crosshair (when isGameStopped is false) or no-drop (when isGameStopped is true)
+
+Exercise 5:
+Reload when 'r' key is pressed
+
+HINTS:	- Use the jQuery .on / keydown to create keydown event handler for the document
+		- execute reload function when the key code is 82 (the 'r' button)
+
+Exercise 6:
+Stop the game and show number of shots when the score >= scoreToWin
+
+HINTS:	- Use $(document).on("gameWon"... to define gameWon event handler for the document
+		- To handle the event, update win-message with the number of shots and show win-message
+		- In the shoot function, when totalScore >= scoreToWin, use $(document).trigger("gameWon") to trigger the gameWon event
+

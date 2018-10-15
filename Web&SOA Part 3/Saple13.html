@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+    //First we create 3 cookies
+    document.cookie = "phone=952-123-4567;"
+    document.cookie = "username=John Doe;"
+    document.cookie = "email=john@doe.com;";
+
+    //A function that, given cookie name, retrieves the value of the cookie
+    //Extra credit: if it cannot find the cookie with cookie name - return "<not found>"
+    function getCookie(cookieName) {
+      var cookieStr = document.cookie;
+      console.log(cookieStr);
+      var startIdx = cookieStr.search(cookieName)
+      if(startIdx > -1){
+        var endIdx = cookieStr.indexOf(";", startIdx)
+
+        if(endIdx > -1){
+          return cookieStr.substring(startIdx+cookieName.length+1, endIdx).trim();
+        }else{
+          return cookieStr.substring(startIdx+cookieName.length+1).trim();
+        }
+      }else{
+        return "";
+      }
+    }
+
+    //Call the function that gets the value and print it out to the screen
+    var username = getCookie("username");
+    alert(username);
+    alert(getCookie("address"));
+    alert(getCookie("email"));
+
+    </script>
+  </body>
+</html>

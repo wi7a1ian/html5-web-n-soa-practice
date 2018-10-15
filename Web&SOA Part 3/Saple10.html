@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="offer">
+          <div id="offer-title">
+            Oferta 2
+          </div>
+          <div id="offer-info">
+            to będzie normalna oferta
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="offer">
+          <div id="offer-title">
+            Oferta 3
+          </div>
+          <div id="offer-info">
+            a tutaj jeszcze kolejna zwykła oferta
+          </div>
+        </div>
+      </div>
+      <!-- insert following div with JS and jQuery
+  		<div class="col-md-4">
+  			<div class="offer promo">
+  				<div id="offer-title">
+  					Oferta 1
+  				</div>
+  				<div id="offer-info">
+  					To będzie promocyjna oferta
+  				</div>
+  			</div>
+  		</div>
+  		-->
+    </div>
+  </div>
+
+  <script>
+    // Case 13
+    var offers = document.getElementsByClassName('row');
+    var newDiv = document.createElement('div');
+    newDiv.className = "col-md-4";
+    newDiv.innerHTML = '<div class="offer promo"><div id="offer-title">Oferta 1</div><div id="offer-info">To będzie promocyjna oferta</div></div>';
+    offers[0].appendChild(newDiv);
+  </script>
+</body>
+
+</html>

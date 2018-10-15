@@ -1,0 +1,31 @@
+﻿JavaScript Events
+
+Exercise 1:
+Run the game when the page loads.
+
+HINTs:	- Use <body> onload attribute to create load event handler
+		- execute startGame function to handle the event
+
+Exercise 2:
+Make tiles clickable when the game is started
+
+HINTS:	- In the attachOnClick function, use addEventListener to create click event handler for each of the tile-container elements
+		- execute clickTile function to handle the event
+
+Exercise 3:
+Run the game when the Start button is clicked. Stop the game when the Stop button is clicked.
+
+HINTS:	- Use <input> onclick attribute to create click event handler
+		- execute restartGame function to handle the event
+
+Exercise 4:
+Make tiles unclickable when the game is stopped and when unmatched tiles are faced up for a second
+
+HINTS:	- In the detachOnClick function, use removeEventListener to remove onclick event handler for each of the tile-container elements
+
+Exercise 5:
+Stop the game and show the score when all tiles are faced up
+
+HINTS: - In the attachGameWon function, use addEventListener to create gameWon event handler for the board element
+	   - execute gameWon function to handle the event
+	   - In the clickTile function, when score === scoreToWin, use dispatchEvent to trigger the gameWon event

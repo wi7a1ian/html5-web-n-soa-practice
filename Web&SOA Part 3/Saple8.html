@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    // Case 12
+    var Employee = function(/*name, age*/){
+      /*this.Name = name;
+      this.Age = age;*/
+
+      /*this.ShowDetails = function(){
+        return "Employee "+this.Name+", Age: "+this.Age;
+      }*/
+    }
+
+    Employee.prototype.ShowDetails = function () {
+      return "Employee: "+this.Name+", Age: "+this.Age;
+    };
+
+    Employee.prototype.Initialize = function (name, age) {
+      this.Name = name;
+      this.Age = age;
+    };
+
+    var emp = new Employee();
+    emp.Initialize("Tomek", 16);
+    console.log(emp.ShowDetails());
+
+    </script>
+  </body>
+</html>

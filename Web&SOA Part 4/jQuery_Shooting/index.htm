@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="scores">
+        <table>
+            <tr>
+                <td>TOTAL SCORE:</td>
+                <td><span id="total-score-value">0</span></td>
+            </tr>
+            <tr>
+                <td>SCORE:</td>
+                <td><span id="score-value">0</span></td>
+            </tr>
+            <tr>
+                <td>ARROWS:</td>
+                <td><span id="arrows-value">5</span></td>
+            </tr>
+        </table>
+
+        <input type="button" id="reset-score" value="Clear" />
+
+        <input type="button" id="stop-start" value="Start" />
+
+        <div id="reload-message" style="display:none">You've got no arrows, reload by clicking the 'r' key!</div>
+        <div id="win-message" style="display:none"></div>
+    </div>
+
+    <div class="container" score="0">
+        <div class="wa" score="1">
+            <!-- 1 -->
+            <div class="wa" score="2">
+                <!-- 2 -->
+                <div class="wa black" score="3">
+                    <!-- 3 -->
+                    <div class="wa black" score="4">
+                        <!-- 4 -->
+                        <div class="wa blue" score="5">
+                            <!-- 5 -->
+                            <div class="wa blue" score="6">
+                                <!-- 6 -->
+                                <div class="wa red" score="7">
+                                    <!-- 7 -->
+                                    <div class="wa red" score="8">
+                                        <!-- 8 -->
+                                        <div class="wa yellow" score="9">
+                                            <!-- 9 -->
+                                            <div class="wa yellow ten-ring" score="10">
+                                                <!-- 10 -->
+                                                <div class="wa yellow x-ring" score="100">
+                                                    <!-- X -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

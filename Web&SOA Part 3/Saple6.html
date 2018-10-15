@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    // Case 10
+    var obj1 = {'from': "China", "to": "China", "subject":"China", "body":"China"}
+    console.log(obj1);
+
+    var obj2 = new Object();
+    obj2.from = "China";
+    obj2.to = "China";
+    obj2.subject = "China";
+    obj2.body = "China";
+    console.log(obj2);
+
+    //function SomeObject2(){
+    var SomeObject2 = function(where){
+      this.from = where;
+      this.to = where;
+      this.subject = where;
+      this.body = "China";
+    }
+    var obj3 = new SomeObject2("China");
+    console.log(obj3);
+
+
+    console.log(obj3.from);
+    console.log(obj3["from"]);
+    var x = "from"; console.log(obj3[x]);
+
+    obj3.cc = "China"
+    console.log(obj3.cc);
+    delete obj3.cc;
+    console.log(obj3.cc);
+
+    </script>
+  </body>
+</html>

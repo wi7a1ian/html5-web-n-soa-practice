@@ -1,0 +1,29 @@
+body {
+  background: #eee;
+  /*transform: rotate(90deg);*/
+}
+
+p {
+  color: blue;
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+.demo {
+  padding: 15px;
+  font-size: 18px;
+  background: #dbdfe5;
+  margin-bottom: 10px;
+}
+
+.shortHeight {
+  min-height: 100px;
+}
+
+.tallHeight {
+  min-height: 200px;
+}

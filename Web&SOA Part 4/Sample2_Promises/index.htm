@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" media="screen" title="no title" charset="utf-8">
+  </head>
+
+  <body>
+    <button id="someButton" type="button" name="button">Lets Process</button>
+
+    <script type="text/javascript">
+      function Foo(timeoutInSec){
+        var deff = $.Deferred();
+
+        setTimeout(function () {
+          deff.resolve();
+        }, timeoutInSec*1000);
+
+        return deff.promise();
+      }
+
+      function Ask(text){
+        var deff = $.Deferred();
+
+        setTimeout(function () {
+          //if(true){
+          if(confirm(text) === true){
+            deff.resolve(true);
+          }else{
+            deff.resolve(false);
+            //deff.reject(false);
+          }
+        }/*, 1*1000*/);
+
+        return deff.then(function(res){
+            return (res === true)?"Done":"Fail";
+        });
+        //return deff.promise();
+      }
+
+      function Process(){
+        $.when(Ask("Are you ok?"), Foo(1)).done(
+          function(askRes, fooRes){
+              console.log(askRes, (new Date()).toLocaleString());
+          }
+        );
+        console.log("Processing finished", (new Date()).toLocaleString());
+      }
+
+      $("#someButton").click(Process);
+    </script>
+
+  </body>
+
+</html>

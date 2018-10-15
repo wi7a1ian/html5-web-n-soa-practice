@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body onLoad="startGame()"> <!--EXERCISE 1 CODE GOES HERE-->
+    <div id="controls">
+        <div id="score-table">
+            TIME: <span id="score-value"></span>
+        </div>
+
+        <input type="button" id="restart" value="Stop" onClick="restartGame()"/> <!--EXERCISE 3 CODE GOES HERE-->
+        <div id="win-message" style="display:none"></div>
+    </div>
+
+    <div id="board"></div>
+
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

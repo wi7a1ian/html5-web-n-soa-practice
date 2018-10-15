@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Web&SOA</title>
+</head>
+<body>
+	<span>
+		The content of SomeText.txt is:
+	</span>
+	<span id="theContent"></span>
+
+	<script type="text/javascript">
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function () {
+			if (xhttp.readyState == 4 && xhttp.status == 200) {
+				document.getElementById("theContent").innerHTML = xhttp.responseText;
+			}
+		};
+		xhttp.open("GET", "SomeText.txt", true);
+		xhttp.send();
+	</script>
+</body>
+</html> 

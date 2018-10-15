@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h4>Local Variable</h4>
+    <div>
+      <span>value outside function: </span>
+      <span id="localOutside"></span>
+    </div>
+    <div>
+      <span>value inside function: </span>
+      <span id="localInside"></span>
+    </div>
+
+    <h4>Global Variable</h4>
+    <div>
+      <span>value outside function: </span>
+      <span id="globalOutside"></span>
+    </div>
+    <div>
+      <span>value inside function: </span>
+      <span id="globalInside"></span>
+    </div>
+
+    <h4>Automatically Global Variable</h4>
+    <div>
+      <span>value outside function: </span>
+      <span id="autoOutside"></span>
+    </div>
+    <div>
+      <span>value inside function: </span>
+      <span id="autoInside"></span>
+    </div>
+
+    <h4>Argument Variable</h4>
+    <div>
+      <span>value outside function: </span>
+      <span id="argumentOutside"></span>
+    </div>
+    <div>
+      <span>value inside function: </span>
+      <span id="argumentInside"></span>
+    </div>
+
+    <h4>window Also Known As (AKA) global</h4>
+    <div>
+      <span>value of window.globalVar: </span>
+      <span id="windowSpan"></span>
+    </div>
+
+
+    <script>
+    // Case 8 - variable scope
+    //Calling function so that varible is initialized
+    //Update all of the document.elementByID... lines to either call a variable name (if it is set) or typeof <variable name>
+    localVariable();
+    document.getElementById("localOutside").innerHTML = localVar;
+
+    function localVariable() {
+      var localVar = "local!";
+      document.getElementById("localInside").innerHTML = localVar;
+    }
+    //**********************************************************
+    var globalVar = "global!";
+    globalVariable();
+    document.getElementById("globalOutside").innerHTML = globalVar;
+
+    function globalVariable() {
+      document.getElementById("globalInside").innerHTML = globalVar;
+    }
+
+    //**********************************************************
+    automaticallyGlobal();
+    document.getElementById("autoOutside").innerHTML = autoGlobalVar;
+
+    function automaticallyGlobal() {
+      autoGlobalVar = "autoGlobal!";
+      document.getElementById("autoInside").innerHTML = autoGlobalVar;
+    }
+    document.getElementById("autoInside").innerHTML = autoGlobalVar;
+
+
+    //**********************************************************
+    argument("argument var!");
+    document.getElementById("argumentOutside").innerHTML = argumentVariable;
+
+    function argument(argumentVariable) {
+      document.getElementById("argumentInside").innerHTML = argumentVariable;
+    }
+
+    //**********************************************************
+    //document.getElementById("windowSpan").innerHTML = ;
+
+
+    </script>
+  </body>
+</html>
